@@ -1,6 +1,7 @@
 # R Course | Programming assignment 2 : Lexical Scoping
 
 
+## makes a matrix which can have its inverse cached
 makeCacheMatrix <- function(x = matrix()) {
         mtrx <- NULL
         set <- function(y) {
@@ -15,6 +16,9 @@ makeCacheMatrix <- function(x = matrix()) {
              getSolve = getSolve)
 }
 
+
+
+## calculates matrix inverse, if matrix inverse has previously been calculated it will draw from the cache
 cacheSolve <- function(x, ...) {
         mtrx <- x$getSolve()
         if(!is.null(mtrx)) {
